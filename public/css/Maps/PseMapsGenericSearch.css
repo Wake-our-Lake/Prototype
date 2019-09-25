@@ -1,0 +1,19 @@
+﻿#pse-maps-servicetype-selector input {
+    width: 16px;
+    height: 16px;
+    padding: 2px 4px;
+}
+
+#pse-maps-servicetype-selector li label {
+    padding: 4px 8px;
+    display: block;
+}
+
+    #pse-maps-servicetype-selector li label:hover {
+        background-color: #efefef
+    }
+
+    #pse-maps-servicetype-selector li label .filter-option-label {
+        padding: 0 0 0 8px;
+        line-height: 16px;
+    }
