@@ -1084,9 +1084,9 @@ html {
 }
 body {
   font-family: 'Roboto' !important;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
-  color: #333;
+  color: #fff;
   background-color: #fff;
 }
 input,
