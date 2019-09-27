@@ -336,9 +336,7 @@ p, .p {
   font-family: "roboto-condensed-bold";
   font-size: 16px; }
 
-html {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
+
 
 .count-wrap i {
   font-size: 64px;
@@ -351,7 +349,6 @@ html {
     margin-bottom: 20px;
 }
 
-.fa, .fas { font-weight: 900; }
 		
 .facts {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -2164,7 +2161,7 @@ header {
     text-align: center;
     text-transform: uppercase;
     font-family: "roboto-condensed-bold";
-    font-size: 46px;
+    font-size: 36px;
     color: #717171; }
     @media (max-width: 768px) {
       .separator .separator-title {
