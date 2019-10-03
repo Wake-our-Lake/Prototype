@@ -2578,7 +2578,7 @@ position: relative;
       margin-left: 5px; }
 .pse-eventdatatable tbody {
   font-size: 12px;
-  color: #4a4a4a;
+  color: #ffffff;
   line-height: 1;
   letter-spacing: .1px; }
   @media (max-width: 991px) {
@@ -2626,6 +2626,8 @@ position: relative;
       
     .pse-eventdatatable tbody td a {
       font-size: 12px;
+      color: rgb(195, 199, 204);
+
       }
       
       .pse-eventdatatable tbody td a + a {
@@ -10592,16 +10594,16 @@ input:-webkit-autofill {
   margin-bottom: 20px;
   padding: 20px; }
   .form-signin.form-main h3 {
-    color: #4a4a4a;
+    color: #ffffff;
     font-family: "roboto-medium";
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 20px;
     margin-top: 10px; }
     @media (max-width: 768px) {
       .form-signin.form-main h3 {
         font-size: 14px; } }
   .form-signin.bg-grey {
-    background: #f6f6f6;
+    background: #1d2930;
     padding: 20px 15px; }
     .form-signin.bg-grey hr {
       background: #979797; }
@@ -10619,6 +10621,7 @@ input:-webkit-autofill {
     border-radius: 0; }
   .form-signin .pse-btn-lw {
     padding: 2px 12px; }
+
 
 @media (max-width: 768px) {
   .pse-banner .form-signin {
