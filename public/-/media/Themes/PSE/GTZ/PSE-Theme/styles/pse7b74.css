@@ -139,8 +139,21 @@ p {
   margin: 0 0 10px; }
 
 body {
-  font-size: 16px;
-  line-height: unset; }
+  font-size: 15px;
+  line-height: unset; 
+  color: #4a4a4a; 
+  font-family: "roboto-regular";
+}
+
+.component-content p
+{
+  font-size: 18px;
+  line-height: unset; 
+  color: #4a4a4a; 
+  font-family: "roboto-regular";
+
+}
+
 
 h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 10px; }
@@ -241,8 +254,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .eligible-unenro
   .action-link:hover {
     text-decoration: none; }
 
-body {
-  font-family: "roboto-regular"; }
+
 
 h1, .h1 {
   color: #4a4a4a;
@@ -254,9 +266,9 @@ h1, .h1 {
       font-size: 46px; } }
 
 h2, .h2 {
-  color: #4a4a4a;
+  color: #000000;
   font-family: "roboto-light";
-  font-size: 42px;
+  font-size: 22px;
   font-weight: 100; }
   @media (max-width: 768px) {
     h2, .h2 {
@@ -17511,8 +17523,6 @@ table.dataTable, table.dataTable th, table.dataTable td {
 .progress-wrapper {
   position: relative; }
 
-body {
-  color: #4a4a4a; }
 
 .anchor-link {
   font-family: "roboto-medium";
@@ -19799,7 +19809,7 @@ body {
   height: 390px;
   background-size: cover !important;
   background-repeat: no-repeat;
-  background-color: #23527c; }
+  background-color: #ececec; }
   .article-lg-banner .headline-component {
     bottom: 9px;
     color: #fff;
@@ -19972,10 +19982,10 @@ body {
   margin-bottom: 0px; }
 
 .article-description {
-  color: #242424;
+  color: #000000;
   letter-spacing: .1px; }
   .article-description p {
-    font-size: 18px; }
+    font-size: 14px; }
     @media (max-width: 768px) {
       .article-description p {
         font-size: 16px; } }
@@ -20592,13 +20602,13 @@ main .CoveoSearchInterface {
   margin-bottom: 0px; }
 
 .article-description {
-  color: #242424;
+  color: #000000;
   letter-spacing: .1px; }
   .article-description p {
-    font-size: 18px; }
+    font-size: 15px; }
     @media (max-width: 768px) {
       .article-description p {
-        font-size: 16px; } }
+        font-size: 15px; } }
   .article-description .page-content {
     margin-bottom: 0;
     word-break: break-word; }
@@ -20615,18 +20625,18 @@ main .CoveoSearchInterface {
 .article-page-content p {
   color: #4a4a4a;
   margin-bottom: 45px;
-  font-size: 18px; }
+  font-size: 15px; }
   @media (max-width: 768px) {
     .article-page-content p {
-      font-size: 16px; } }
+      font-size: 15px; } }
 
 .article-page-content a {
   color: #1771cc;
   line-height: .9;
-  font-size: 20px; }
+  font-size: 15px; }
   @media (max-width: 768px) {
     .article-page-content a {
-      font-size: 18px; } }
+      font-size: 15px; } }
 
 .article-signup-description {
   padding: 30px 0;
