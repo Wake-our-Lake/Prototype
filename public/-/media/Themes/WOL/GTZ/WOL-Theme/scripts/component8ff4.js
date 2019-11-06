@@ -1,7 +1,7 @@
 (function($) {
     $(document).ready(function(){
-        if ($("#psePublicNoticeModal").length){
-            $('#psePublicNoticeModal').modal('show');
+        if ($("#wolPublicNoticeModal").length){
+            $('#wolPublicNoticeModal').modal('show');
         }
     });
 })(jQuery);
@@ -696,28 +696,28 @@ function isNativeURL(val){
 	return val.indexOf("javascript") == 0 || val.indexOf("mailto") == 0 || val.indexOf("tel") == 0 || val.indexOf("ftp") == 0;
 }
 $(document).ready(function(){
-	if($(".jumbotron.pse-banner").length > 0 || $(".pse-secondary-header").length > 0 || $(".article-banner").length > 0 || $(".article-lg-banner").length > 0 || $(".rebates-banner").length > 0 ) {
+	if($(".jumbotron.wol-banner").length > 0 || $(".wol-secondary-header").length > 0 || $(".article-banner").length > 0 || $(".article-lg-banner").length > 0 || $(".rebates-banner").length > 0 ) {
 		$(".breadcrumb-wrap").hide();
 	}
-	if($(".pse-primary-nav").length > 0 && $(".progress-tracker").length > 0) {
+	if($(".wol-primary-nav").length > 0 && $(".progress-tracker").length > 0) {
 		$(".breadcrumb-wrap").hide();
 		$("main").css("margin-top","45px");
 	}
 	if($(".budget-payment-plan .user-account-info-wrapper").length > 0) {
 		$(".budget-payment-plan .pagetitle h4").addClass("table-head");
 	}
-	if($(".pse-breadcrumb").length > 0) {
+	if($(".wol-breadcrumb").length > 0) {
 		$(".main-container, .top-container-settings").addClass("page-breadcrumb");
 		$(".separator").css("padding-top","20px");
-		if($('.mypse').length > 0) {
+		if($('.mywol').length > 0) {
 			$(".breadcrumb-wrap").addClass('bg-grey');
-			$(".pse-panel").css("margin-top","0");
+			$(".wol-panel").css("margin-top","0");
 		}
 	}		
 	// if($(".carbon-banner").length > 0) {
 	// 	$(".breadcrumb-wrap").css("height","74px");
 	// }	
-	if($(".pse-secondary-header").length > 0) {
+	if($(".wol-secondary-header").length > 0) {
 		if($(".main-container").length > 0) {
 			$(".main-container").addClass('secondary-main-container');
 		}
@@ -739,8 +739,8 @@ $(window).on('load',function () {
 });
 function swapmenu() { console.log('came');
     if ($(window).width() <= 991) {
-        _primaryNav = $('.pse-primary-nav');
-        _secondaryNav = $('.pse-secondary-nav');
+        _primaryNav = $('.wol-primary-nav');
+        _secondaryNav = $('.wol-secondary-nav');
 
         _tempPrimary = _primaryNav.clone();
         _tempSecondary = _secondaryNav.clone();
@@ -753,12 +753,12 @@ function swapmenu() { console.log('came');
 }
 $('.search-initial').click(function() {
     $(this).hide();
-    $('.pse-search-box').addClass('search-fullWidth');
+    $('.wol-search-box').addClass('search-fullWidth');
     $('.search-items').show();
 });
 $('.search-items .search-close').click(function() {
     $('.search-items').hide();
-    $('.pse-search-box').removeClass('search-fullWidth');
+    $('.wol-search-box').removeClass('search-fullWidth');
     $('.search-initial').show();
 });
 
@@ -792,8 +792,8 @@ $('.search-items .search-close').click(function() {
 // Coveo Search  
 function searchInitial(){
     if ($(window).width() <= 991) { 
-        if ($(".pse-search-box .search-initial").length <= 0) {
-            $(".pse-search-box ").prepend("<div class='search-initial visible-xs visible-sm'><label>SEARCH</label><i class='fa fa-search'></i></div>");
+        if ($(".wol-search-box .search-initial").length <= 0) {
+            $(".wol-search-box ").prepend("<div class='search-initial visible-xs visible-sm'><label>SEARCH</label><i class='fa fa-search'></i></div>");
         }      
     }
 }  
@@ -806,31 +806,31 @@ $(document).ready(function(e){
 });
 $(document).on('click', '.search-initial', function() {  
     if ($(window).width() <= 991) {     
-        $(".pse-search-box").css('width','100%');   
-        $(".pse-search-box .CoveoSearchButton").show();
-        $(".pse-search-box .CoveoSearchbox .magic-box").show();
+        $(".wol-search-box").css('width','100%');   
+        $(".wol-search-box .CoveoSearchButton").show();
+        $(".wol-search-box .CoveoSearchbox .magic-box").show();
         $(".search-initial").hide();        
     }
 });
 $(document).on('click', '.magic-box-clear', function() {  
     if ($(window).width() <= 991) {        
-        $(".pse-search-box .CoveoSearchbox .magic-box").hide();  
-        $(".pse-search-box").css('width','75%');         
+        $(".wol-search-box .CoveoSearchbox .magic-box").hide();  
+        $(".wol-search-box").css('width','75%');         
         $(".search-initial").show();
-        $(".pse-search-box .CoveoSearchButton").hide();
+        $(".wol-search-box .CoveoSearchButton").hide();
     }
 });
 $(document).ready(function(){
   var windowWidth = $(window).width();
   if(windowWidth <= 768) //for iPad & smaller devices
-    $(document).on('click', '.pse-footer-menus h6', function(e) {
+    $(document).on('click', '.wol-footer-menus h6', function(e) {
         if($(this).hasClass("menus-open")){ 
             $(this).removeClass("menus-open");
             $(this).next("ul").hide(); 
         }
         else{
-            $('.pse-footer-menus ul').hide();
-            $('.pse-footer-menus h6').removeClass("menus-open");
+            $('.wol-footer-menus ul').hide();
+            $('.wol-footer-menus h6').removeClass("menus-open");
             $(this).addClass("menus-open");
             $(this).next("ul").slideToggle();
         }
@@ -1019,33 +1019,18 @@ $(document).ready(function () {
 });
 $("#_logout").click(function () {
 
-    Pselogout();
+    Wollogout();
 });
 $("#_signout").click(function () {
-    Pselogout();
+    Wollogout();
 });
 
 $(".logInOut").click(function () {
-    Pselogout();
+    Wollogout();
 });
 
-function Pselogout() {
-    $("#login").hide();
-    $.ajax({
-        url: '/api/pseauthentication/logout',
-        type: "GET",
-        datatype: "json",
-        contenttype: 'application/json; charset=utf-8',
-        data: null,
-        context: this,
-        success: function (data) {
-            window.location = "/";
-        },
-        error: function (xhr) {
-
-            console.log('error');
-        }
-    });
+function Wollogout() {
+    
 }
 
 $("#_securitySubmit").click(function () {
@@ -1077,24 +1062,7 @@ $("#_securitySubmit").click(function () {
     var formdata = $("#createaccount-security-questions").serialize();
 
     $.ajax({
-        url: '/api/pseauthentication/SetSigninSecurityQuestion',
-        type: "POST",
-        datatype: "json",
-        contenttype: 'application/json; charset=utf-8',
-        data: formdata,
-        context: this,
-        success: function (data) {
-
-            $("#setup-security-questions").hide();
-            $("#setup-security-questions").next('.modal-backdrop').hide();
-
-
-        },
-        error: function (xhr) {
-
-            console.log('error');
-
-        }
+       
     });
 
     return false;
@@ -1340,7 +1308,7 @@ if($(".load-datatable").length != 0) {
     $(document).click(function(){
         $("div[data-customfilter-dropdown]").addClass("hide");
     });    
-    $('.pse-datatable th').click(function(e) {  
+    $('.wol-datatable th').click(function(e) {  
         if(!(e.target.tagName.toLowerCase() == "span")){
             e.stopImmediatePropagation();
         }
@@ -1361,7 +1329,7 @@ if($(".load-datatable").length != 0) {
         var _documentZeroRecordInfo = "No records available"; 
         var _documentEmptyRecordInfo = "";
         var _billingInsertUrl, _billingHistoryPdfUrl, _documentDownloadUrl;
-        var _insertIconUrl= "/Content/pse/images/insert.png";
+        var _insertIconUrl= "/Content/wol/images/insert.png";
         var _billingSortValue = [4];
         var _documentSortValue = true;
         $("#select-account").on('change', function() {
@@ -1539,7 +1507,7 @@ var minAmount =  $('#minAmount').attr("id"),
             buttons: [{
                 extend: 'csv',
                 className:"hide",                            
-                filename:"pse billing and payment history",
+                filename:"wol billing and payment history",
                 exportOptions: {                    
                     columns: [0,2,3]
                 }
@@ -1803,11 +1771,11 @@ function tableMobileView(e,targetTable){
     var _mobileData = '<div class="col-sm-12 list-view-data"><a class="back-btn"><i class="fa fa-angle-left"></i>Back</a><ul>' +
     _mbllist +     '</ul></div>';
     _mblArray.pop();
-    $(".pse-datatable").hide(500);
+    $(".wol-datatable").hide(500);
     $("#billing-history-wrapper").append(_mobileData);
 }
 $(document).on('click', '.back-btn', function(e) {
-    $(".pse-datatable").show(500);    
+    $(".wol-datatable").show(500);    
     $(".list-view-data").hide(500);
     $(".list-view-data").remove();
 });
@@ -2073,10 +2041,10 @@ $(document).ready(function () {
                {
                    "data": "AccountStatus",
                    "render": function (data, type, row, meta) {
-                    var comm_icon="~/media/Project/PSE/Portal/AccountSelector/icon-commercial.png";
-                    //var comm_icon="/Content/pse/images/icon-commercial.png"; //uncomment when u are checking locally in fed site
-                    var res_icon="~/media/Project/PSE/Portal/AccountSelector/icon-residential.png";
-                    //var res_icon="/Content/pse/images/icon-residential.png"; //uncomment when u are checking locally in fed site
+                    var comm_icon="~/media/Project/wol/Portal/AccountSelector/icon-commercial.png";
+                    //var comm_icon="/Content/wol/images/icon-commercial.png"; //uncomment when u are checking locally in fed site
+                    var res_icon="~/media/Project/wol/Portal/AccountSelector/icon-residential.png";
+                    //var res_icon="/Content/wol/images/icon-residential.png"; //uncomment when u are checking locally in fed site
                     var L1 = row.ServiceAddress.Line_1;
                     var L2 = row.ServiceAddress.Line_2;
                     var City = row.ServiceAddress.City;
@@ -2444,9 +2412,9 @@ $(document).ready(function() {
                                         if ((row.PastDueAmount > 0) || (row.DunningStatus >= 5)) { // dunning & past Due amount account icon
                                             return '<i class="activity-icon fa fa-warning"></i>' + row.AccountStatus;
                                         } else if (row.AccountType == "Commercial") {
-                                            return '<img src="~/media/Project/PSE/Portal/AccountSelector/icon-commercial.png" alt="Commercial"  class="activity-icon">' + row.AccountStatus;
+                                            return '<img src="~/media/Project/WOL/Portal/AccountSelector/icon-commercial.png" alt="Commercial"  class="activity-icon">' + row.AccountStatus;
                                         } else if (row.AccountType == "Residential") {                                            
-                                            return '<img src="~/media/Project/PSE/Portal/AccountSelector/icon-residential.png" alt="Residentials"  class="activity-icon">' + row.AccountStatus;
+                                            return '<img src="~/media/Project/WOL/Portal/AccountSelector/icon-residential.png" alt="Residentials"  class="activity-icon">' + row.AccountStatus;
                                         }
 
                                         
@@ -2506,12 +2474,12 @@ $(document).ready(function() {
                         {
                             "data": "AmountDue",
                             "render": function(data, type, row, meta) {
-                                return '<button class="pse-form-btn" type="submit" data-toggle="modal" data-target="#select-payment-option" > Pay Now<i class="fa fa-chevron-right"></i></button>';
+                                return '<button class="wol-form-btn" type="submit" data-toggle="modal" data-target="#select-payment-option" > Pay Now<i class="fa fa-chevron-right"></i></button>';
                                 
                                 
 
                                 if ($(window).width() < 767) {
-                                    return '<button class="pse-form-btn" type="submit" > Pay Now <i class="fa fa-chevron-right"></i></button>';
+                                    return '<button class="wol-form-btn" type="submit" > Pay Now <i class="fa fa-chevron-right"></i></button>';
                                 }
 
 
@@ -2737,7 +2705,7 @@ $(document).ready(function() {
 
 // encrypting field value on submit event for , creating for submitting spcial charcter in sitecore solution
 // create account security question submit 
-$("#createaccount-security-questions.create-account-by-ac-no .pse-btn-primary").on('click', function(event) {
+$("#createaccount-security-questions.create-account-by-ac-no .wol-btn-primary").on('click', function(event) {
     if($('#createaccount-security-questions').valid()){
         var encrypt1 = $('#firstSecurityQuestAnswertxt').val();
         var encode1 = escape(encrypt1);
@@ -2766,7 +2734,7 @@ $("#createaccount-security-questions.create-account-by-ac-no .pse-btn-primary").
 // Preference center security question - encrypted response.
 // encrypting field value on change event for , creating for submitting spcial charcter in sitecore solution
 
-$("#createaccount-security-questions1 .pse-btn-primary.act-update-btn").on('click', function(event) {
+$("#createaccount-security-questions1 .wol-btn-primary.act-update-btn").on('click', function(event) {
     if($('#createaccount-security-questions1').valid()){
         var encrypt = $('#firstSecurityQuestAnswer').val();
         var encoded = escape(encrypt);
@@ -2776,7 +2744,7 @@ $("#createaccount-security-questions1 .pse-btn-primary.act-update-btn").on('clic
 	   
 });
 
-$("#createaccount-security-questions2 .pse-btn-primary.act-update-btn").on('click', function(event) {
+$("#createaccount-security-questions2 .wol-btn-primary.act-update-btn").on('click', function(event) {
 	if($('#createaccount-security-questions2').valid()){
         var encrypt = $('#secondSecurityQuestAnswer').val();
 		var encoded = escape(encrypt);
@@ -2785,7 +2753,7 @@ $("#createaccount-security-questions2 .pse-btn-primary.act-update-btn").on('clic
     }
     
 });
-$("#createaccount-security-questions3 .pse-btn-primary.act-update-btn").on('click', function(event) {
+$("#createaccount-security-questions3 .wol-btn-primary.act-update-btn").on('click', function(event) {
 	if($('#createaccount-security-questions3').valid()){
         var encrypt = $('#thirdSecurityQuestAnswer').val();
 		var encoded = escape(encrypt);
@@ -2794,7 +2762,7 @@ $("#createaccount-security-questions3 .pse-btn-primary.act-update-btn").on('clic
     }
    
 });
-$("#createaccount-security-questions4 .pse-btn-primary.act-update-btn").on('click', function(event) {
+$("#createaccount-security-questions4 .wol-btn-primary.act-update-btn").on('click', function(event) {
 	if($('#createaccount-security-questions4').valid()){
         var encrypt = $('#fourthSecurityQuestAnswer').val();
     var encoded = escape(encrypt);
@@ -2806,7 +2774,7 @@ $("#createaccount-security-questions4 .pse-btn-primary.act-update-btn").on('clic
 
 // forgot password security question 
 //$("#Answer").on('change', function(event) {
-    $("#forgotPasswordSecurity .pse-btn-primary").on('click', function(event) {  
+    $("#forgotPasswordSecurity .wol-btn-primary").on('click', function(event) {  
         if($('#forgotPasswordSecurity').valid()){
             var encrypt = $('#Answertxt').val();
             var encode = escape(encrypt);
@@ -2898,12 +2866,12 @@ $(document).ready(function () {
 });
 $(document).ready(function(){
     // Add minus icon for collapse element which is open by default
-    $(".pse-accordion .collapse.in").each(function(){
-        $(this).siblings(".pse-accordion .panel-heading").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+    $(".wol-accordion .collapse.in").each(function(){
+        $(this).siblings(".wol-accordion .panel-heading").find(".fa").addClass("fa-minus").removeClass("fa-plus");
     });
     
-    // Toggle plus minus icon on show hide of collapse element
-    $(".pse-accordion .collapse").on('show.bs.collapse', function(){
+    // Toggle plus minus icon on show hide of collawol element
+    $(".wol-accordion .collapse").on('show.bs.collapse', function(){
         $(this).parent().find(".fa").removeClass("fa-plus").addClass("fa-minus");
     }).on('hide.bs.collapse', function(){
         $(this).parent().find(".fa").removeClass("fa-minus").addClass("fa-plus");
@@ -3008,7 +2976,7 @@ function initiateSlick() {
         infinite: true,
         arrows: true
     });
-    $('.pse-video-gallery .video-thumbnails').slick({
+    $('.wol-video-gallery .video-thumbnails').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: $('.video-slider'),
@@ -3231,7 +3199,7 @@ $(document).ready(function () {
                     {
                         "data": "goTask",
                         "render": function (data, type, row, meta) {
-                            return '<a class=" pse-anchor-link">' + row.goTask + '<i class="fa fa-chevron-right"></i></a>';
+                            return '<a class=" wol-anchor-link">' + row.goTask + '<i class="fa fa-chevron-right"></i></a>';
                            
                         }
                     }
@@ -3307,7 +3275,7 @@ if ($(".load-calendarlist").length != 0) {
                 {
                     "data": "goTask",
                     "render": function (data, type, row, meta) {
-                        return '<a class=" pse-anchor-link">' + row.goTask + '<i class="fa fa-chevron-right"></i></a>';
+                        return '<a class=" wol-anchor-link">' + row.goTask + '<i class="fa fa-chevron-right"></i></a>';
 
                     }
                 }
@@ -3417,7 +3385,7 @@ $(document).ready(function () {
                     {
                         "data": "schedulelink",
                         "render": function (data, type, row, meta) {
-                            return '<p><a class="pse-link-primary" href="#">' + row.schedulelink + '</a></p>'
+                            return '<p><a class="wol-link-primary" href="#">' + row.schedulelink + '</a></p>'
                         }
                     }
                 ],
@@ -3705,9 +3673,9 @@ $(function() {
 
         if (valid) {
             // alert('hi');
-            $(this).find('.next, .pse-btn-primary').prop("disabled", false);
+            $(this).find('.next, .wol-btn-primary').prop("disabled", false);
         } else {
-            $(this).find('.next, .pse-btn-primary').prop("disabled", true);
+            $(this).find('.next, .wol-btn-primary').prop("disabled", true);
         }
 
 
@@ -5128,7 +5096,7 @@ function captchCallback() {
 $("#reset-password").submit(function() {
     var valid = $(this).validate().checkForm();
     var passwordField = $(this).find('#PasswordPlaceholder');
-    var btnNext = $(this).find('.pse-btn-primary');
+    var btnNext = $(this).find('.wol-btn-primary');
     var letters = /[A-Za-z]/;
     var numbers = /[0-9]/;
     // if (passwordField.val().length >= 8 && ((passwordField.val().match(letters)) && (passwordField.val().match(numbers)))) {
@@ -5245,7 +5213,7 @@ $(".form-create-account").on('blur change keyup', function() {
 
     if (valid) {
 
-        $(this).find('.next, .pse-btn-primary').prop("disabled", false);
+        $(this).find('.next, .wol-btn-primary').prop("disabled", false);
 
         if (acUsername.length != 0 && acUsername.val().length < 6) {
             btnNext.prop("disabled", true);
@@ -5261,7 +5229,7 @@ $(".form-create-account").on('blur change keyup', function() {
             btnNext.prop("disabled", true);
         }
     } else {
-        $(this).find('.next, .pse-btn-primary').prop("disabled", true);
+        $(this).find('.next, .wol-btn-primary').prop("disabled", true);
     }
 });
 
@@ -5322,7 +5290,7 @@ $("body").on("click", "button[name='CommonSignin']", function(e) {
         var successData="";
 
         $.ajax({
-            url: '/api/pseauthentication/AsyncSignIn',
+            url: '/api/wolauthentication/AsyncSignIn',
             type: "POST",
             datatype: "json",
             global:false,
@@ -5343,7 +5311,7 @@ $("body").on("click", "button[name='CommonSignin']", function(e) {
                     window.location.href = returnUrl;
                 } else if (errorMessage === null || errorMessage === "") {
                     $(".loader-contentarea").addClass("show");  // loading ajax loader icon.
-                    var pageRedirect = $('#MyPseRedirectUrl').val();
+                    var pageRedirect = $('#MyWolRedirectUrl').val();
                     window.location.href = pageRedirect;
                 } else if (errorMessage === "locked") {
                     $('#signinerrormessage').html(successData['LockedMessage']);                
@@ -5785,7 +5753,7 @@ $(document).ready(function() {
     $("#update-pwd-credentials").submit(function() {
         var valid = $(this).validate().checkForm();
         var passwordField = $(this).find('#NewPassword');
-        var btnNext = $(this).find('.pse-btn-primary');
+        var btnNext = $(this).find('.wol-btn-primary');
         var letters = /[A-Za-z]/;
         var numbers = /[0-9]/;
         // if (passwordField.val().length >= 8 && ((passwordField.val().match(letters)) && (passwordField.val().match(numbers)))) {
